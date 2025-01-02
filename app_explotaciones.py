@@ -15,7 +15,7 @@ with st.sidebar:
     seleccion_provincia = st.multiselect('Selecciona las provincia:', ['Coruña','Lugo','Ourense','Pontevedra'])
 
 
-    df=pd.read_csv('C:/Users/alvar/Desktop/Explotaciones_mineras/Analise_explotacions.csv',
+    df=pd.read_csv('Analise_explotacions.csv',
                encoding='latin1',skiprows=1,index_col=0,parse_dates=['Fecha visita'],dayfirst=True)
     df=limpieza_datos(df)
     df = df[df['provincia'].isin(seleccion_provincia)]
